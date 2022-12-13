@@ -1,0 +1,199 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -------- Base ----------- */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*     ------------ */
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+    
+}
+header {
+    width: 100%;
+    height: 112px;
+    background-color: #001489;
+}
+.header {
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.header_logo {
+   padding: 22px 12px;
+}
+
+.header_navbar {
+    padding-left: 0;
+}
+.header_navbar-item {
+    float: left;
+    line-height: 112px;
+    list-style: none;
+}
+.header_navbar-link {
+    color: #fff;
+    display: block;
+    padding: 0 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.banner {
+    width: 100%;
+    margin: 0 auto;
+
+}
+.banner-img {
+   width: 100%;
+
+}
+.squad_team-name {
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #001489;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.squad_team-gk {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.player_box {
+    background-color: #001489;
+    width: 270px;
+    height: 202px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.6s linear;
+    animation: fadeIn forwards;
+}
+
+.squad_team-defender {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.squad_team-midfielder {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.squad_team-attacker {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-img {
+    position: absolute;
+    bottom: 0px;
+}
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    
+}
+.profile {
+    position: absolute;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    bottom: 30px;
+    left: 10px;
+    transform: translateX(-40%);
+    transition: 0.4s;
+    animation: fadeIn ease-in;
+    opacity: 0;
+}
+/* Hover */
+.player_box:hover .overlay {
+    display: block;
+}
+.player_box:hover .profile {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+}
+.legends_club-drogba:hover .drogba-img  {
+    /* transform: translateX(0); */
+    opacity: 1;
+}
+/* ------------- */
+.legend_club-title {
+    text-align: center;
+    color: #001489;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    font-weight: bold;
+}
+.legends_club-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+.legends_club-drogba {
+    background-color: #001489;
+    width: 460px;
+    height: 455px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: linear 0.7s;
+}
+
+.legends_club-terry {
+    background-color: #001489;
+    width: 460px;
+    height: 455px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.drogba-img {
+    position: absolute;
+    left: -40px;
+    bottom: 16px;
+    /* transform: translateX(-40%); */
+    transition: 0.4s;
+    animation: fadeIn ease-in;
+    /* opacity: 0; */
+}
+.terry-img {
+    position: absolute;
+    top: -80px;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* --------- */
